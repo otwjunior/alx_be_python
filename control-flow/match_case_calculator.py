@@ -1,10 +1,10 @@
 #match case calculator
 num1= int(input('Enter the first number: '))
 num2= int(input('Enter the second number: '))
-operators = input('Choose the operation (+,-,*,/): ')
+operation = input('Choose the operation (+,-,*,/): ')
 
 try:
-    match operators:
+    match operation:
         case '+':
             print(f'The result is {num1+num2}.')
         case '-':
