@@ -1,9 +1,9 @@
 #todo list
 task = input('Enter your task: ')
-taskPriority = input('Priority (high/medium/low): ')
+priority = input('Priority (high/medium/low): ')
 time = input('Is it time-bound? (yes/no): ')
 
-match taskPriority:
+match priority:
     case 'high':
         if time == 'yes':
             print('Reminder: ' +task + ' is important and urgent, complete it now.')
