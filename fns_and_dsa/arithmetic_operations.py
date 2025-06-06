@@ -11,4 +11,5 @@ def perform_operation(num1, num2, operation):
         else:
             return 'operation not allowed.'
     except ZeroDivisionError:
-        return 'cannot divide by zero'
+        print ('cannot divide by zero')
+        return 0
