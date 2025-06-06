@@ -17,4 +17,4 @@ try:
         T=convert_to_celsius(temperature)
         print(f"{temperature:.1f}°F is {T:.1f}°C")
 except ValueError:
-    print("Invalid temparature. Please enter a numeric value.")
+    print("Invalid temperature. Please enter a numeric value.")
