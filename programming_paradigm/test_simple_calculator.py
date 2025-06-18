@@ -18,7 +18,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertRaises(TypeError,self.calc.add, 5)
         
         # Add more assertions to thoroughly test the add method.
-    def test_substraction(self):
+    def test_subtraction(self):
         '''test subraction method'''
         self.assertEqual(self.calc.subtract(2, 3), -1)
         self.assertEqual(self.calc.subtract(-1, 1), -2)
