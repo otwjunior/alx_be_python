@@ -1,15 +1,21 @@
 class BankAccount:
+    _shared_balance =None # to be modified by instance method
+
     def __init__(self,account_balance=0):
-        self.account_balance= account_balance
+        if BankAccount._shared_balance is None:
+            BankAccount._shared_balance = account_balance
+        
     
     def deposit(self, amount):
-        self.account_balance+=amount
-    
+        BankAccount._shared_balance +=amount
+        #self.account_balance=BankAccount._shared_balance
+            
     def withdraw(self, amount):
-        if self.account_balance >= amount:
-            self.account_balance -= amount
+        if BankAccount._shared_balance>= amount:
+            BankAccount._shared_balance-= amount
+            #self.account_balance = BankAccount._shared_balance
             return True
         return False    
     
     def display_balance(self):
-        print(f'Ccurrent Balance: ${self.account_balance}')
+        print(f'Current Balance: ${BankAccount._shared_balance}')
